@@ -1,0 +1,272 @@
+/*
+Theme Name: WPMatch Theme
+Description: A WordPress theme designed for the WPMatch plugin with matching functionality.
+Version: 1.0.0
+Author: Your Name
+Author URI: https://github.com/terryarthur
+Text Domain: wpmatch-theme
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+}
+
+a {
+    color: #007cba;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 0;
+}
+
+.site-main {
+    flex: 1;
+    padding: 2rem 0;
+}
+
+.site-footer {
+    background: #f8f9fa;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+.site-branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.site-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Navigation */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-navigation a {
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.main-navigation a:hover {
+    color: #007cba;
+    text-decoration: none;
+}
+
+/* Content */
+.content-area {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.site-main {
+    padding: 0;
+}
+
+/* Posts */
+.post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.entry-header {
+    margin-bottom: 1rem;
+}
+
+.entry-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.entry-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.entry-title a:hover {
+    color: #007cba;
+}
+
+.entry-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.entry-content {
+    margin: 1.5rem 0;
+}
+
+.entry-content p {
+    margin-bottom: 1rem;
+}
+
+/* Match-specific styles */
+.wpmatch-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.wpmatch-matches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.wpmatch-match {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+
+.wpmatch-match-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+.wpmatch-match-score {
+    background: #007cba;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.wpmatch-load-more {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.wpmatch-load-more:hover {
+    background: #005a87;
+}
+
+/* Sidebar */
+.widget-area {
+    padding-left: 2rem;
+}
+
+.widget {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.widget-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #333;
+}
+
+/* Footer */
+.footer-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.site-info {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-area {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .widget-area {
+        padding-left: 0;
+    }
+    
+    .site-branding {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .wpmatch-matches {
+        grid-template-columns: 1fr;
+    }
+    
+    .entry-title {
+        font-size: 1.5rem;
+    }
+}
