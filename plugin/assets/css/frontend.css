@@ -1,0 +1,219 @@
+/* WPMatch Plugin Frontend Styles */
+
+/* Shortcode Container */
+.wpmatch-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.wpmatch-matches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.wpmatch-match {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wpmatch-match:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wpmatch-match-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.wpmatch-match-score {
+    background: #007cba;
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.wpmatch-match-description {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.wpmatch-match-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.wpmatch-load-more {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.wpmatch-load-more:hover {
+    background: #005a87;
+}
+
+.wpmatch-load-more:disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Button Styles */
+.wpmatch-container .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wpmatch-container .btn-primary {
+    background-color: #007cba;
+    color: #fff;
+}
+
+.wpmatch-container .btn-primary:hover {
+    background-color: #005a87;
+    text-decoration: none;
+}
+
+.wpmatch-container .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.wpmatch-container .btn-secondary:hover {
+    background-color: #5a6268;
+    text-decoration: none;
+}
+
+.wpmatch-container .btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.wpmatch-container .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Loading States */
+.wpmatch-loading {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+.wpmatch-loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007cba;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: wpmatch-spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes wpmatch-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error States */
+.wpmatch-error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    margin: 1rem 0;
+}
+
+/* Success States */
+.wpmatch-success {
+    background: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #c3e6cb;
+    margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wpmatch-container {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .wpmatch-matches {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .wpmatch-match {
+        padding: 1rem;
+    }
+    
+    .wpmatch-match-actions {
+        flex-direction: column;
+    }
+    
+    .wpmatch-load-more {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wpmatch-container {
+        padding: 0.75rem;
+    }
+    
+    .wpmatch-match {
+        padding: 0.75rem;
+    }
+    
+    .wpmatch-match-title {
+        font-size: 1.1rem;
+    }
+    
+    .wpmatch-container .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
