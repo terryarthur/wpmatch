@@ -1,0 +1,55 @@
+{
+  "name": "wpmatch",
+  "version": "1.0.0",
+  "description": "WordPress plugin and theme for matching functionality",
+  "scripts": {
+    "build": "npm run build:plugin && npm run build:theme",
+    "build:plugin": "webpack --config webpack.plugin.config.js",
+    "build:theme": "webpack --config webpack.theme.config.js",
+    "watch": "npm run watch:plugin & npm run watch:theme",
+    "watch:plugin": "webpack --config webpack.plugin.config.js --watch",
+    "watch:theme": "webpack --config webpack.theme.config.js --watch",
+    "lint": "eslint plugin/ theme/ --ext .js,.jsx",
+    "lint:fix": "eslint plugin/ theme/ --ext .js,.jsx --fix",
+    "format": "prettier --write \"**/*.{js,jsx,css,scss,json,md}\"",
+    "zip:plugin": "cd plugin && zip -r ../wpmatch-plugin.zip . -x '*.DS_Store' '*node_modules*' '*.git*'",
+    "zip:theme": "cd theme && zip -r ../wpmatch-theme.zip . -x '*.DS_Store' '*node_modules*' '*.git*'"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "@babel/preset-react": "^7.22.0",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.8.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "prettier": "^2.8.0",
+    "sass": "^1.63.0",
+    "sass-loader": "^13.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "theme",
+    "matching",
+    "wpmatch"
+  ],
+  "author": "Your Name",
+  "license": "GPL-2.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terryarthur/wpmatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/terryarthur/wpmatch/issues"
+  },
+  "homepage": "https://github.com/terryarthur/wpmatch#readme"
+}
