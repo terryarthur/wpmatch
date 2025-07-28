@@ -1,0 +1,358 @@
+/* WPMatch Theme Main Styles */
+
+/* Additional styles to complement the main style.css */
+
+/* Match Profile Cards */
+.match-profile-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.profile-name {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.profile-name a {
+    color: #333;
+    text-decoration: none;
+}
+
+.profile-name a:hover {
+    color: #007cba;
+}
+
+.profile-age,
+.profile-location {
+    margin: 0.25rem 0;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.profile-interests {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.profile-interests strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.profile-excerpt {
+    margin: 1rem 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007cba;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #005a87;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    text-decoration: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Compatibility Scores */
+.compatibility-score {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.score-excellent {
+    background-color: #28a745;
+}
+
+.score-good {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.score-average {
+    background-color: #fd7e14;
+}
+
+.score-poor {
+    background-color: #dc3545;
+}
+
+/* Notifications */
+.wpmatch-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: none;
+}
+
+.notification-content {
+    padding: 2rem;
+    text-align: center;
+    max-width: 400px;
+}
+
+.notification-content h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    color: #28a745;
+}
+
+.notification-content p {
+    margin: 0 0 1.5rem 0;
+    color: #555;
+}
+
+.notification-content .btn {
+    margin: 0 0.5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 1rem 0;
+}
+
+.breadcrumb ol {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+    margin: 0 0.5rem;
+    color: #6c757d;
+}
+
+.breadcrumb a {
+    color: #007cba;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+/* Archive Styles */
+.archive-description {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Single Profile Styles */
+.single-match-profile .entry-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.single-match-profile .profile-featured-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.single-match-profile .profile-featured-image img {
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.profile-detail-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.profile-detail-section h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .main-navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border: 1px solid #eee;
+        border-top: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .main-navigation.mobile-menu-open {
+        display: block;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0;
+    }
+    
+    .main-navigation li {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .main-navigation a {
+        display: block;
+        padding: 1rem 0;
+    }
+    
+    .profile-actions {
+        flex-direction: column;
+    }
+    
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .notification-content {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .wpmatch-container {
+        padding: 1rem;
+    }
+    
+    .match-profile-card {
+        padding: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
