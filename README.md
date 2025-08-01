@@ -306,10 +306,10 @@ This project is licensed under the GPL v2 or later - see the [LICENSE](LICENSE) 
 
 ## 📞 Contact
 
-- **Author**: Your Name
-- **Email**: your.email@example.com
+- **Author**: Terry Arthur
+- **Email**: terryarthur@gmail.com
 - **GitHub**: [@terryarthur](https://github.com/terryarthur)
-- **Website**: [your-website.com](https://your-website.com)
+- **Website**: [terryarthur.com](https://terryarthur.com)
 
 ---
 
